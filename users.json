@@ -1,0 +1,47 @@
+{
+  "admin": {
+    "username": "admin",
+    "password_hash": "$2b$12$AF2z3KRecbMcOIdMSdoYn.lh7ChKOfiZS5Lf48AWN9Gp/3um5Z2fK",
+    "role": "admin",
+    "full_name": "مدير النظام",
+    "email": "admin@scouts.ma",
+    "created_at": "2026-04-04T12:17:56.311538",
+    "is_active": true
+  },
+  "ahmed_admin": {
+    "username": "ahmed_admin",
+    "password_hash": "$2b$12$q6kaYRQzU3bN/W2A5OG14u5i4RiMQGTEEAgTvkoCAuOaEct76ZGKy",
+    "role": "admin",
+    "full_name": "أحمد محمد",
+    "email": "ahmed@scouts.ma",
+    "created_at": "2026-04-04T12:19:06.778138",
+    "is_active": true
+  },
+  "fatima_admin": {
+    "username": "fatima_admin",
+    "password_hash": "$2b$12$Xdcq0mTz/3HnKTrIIk8shOxbJLVI1qMhh1vdZ9lCdbUf2/T1AUfcK",
+    "role": "admin",
+    "full_name": "فاطمة علي",
+    "email": "fatima@scouts.ma",
+    "created_at": "2026-04-04T12:19:07.185149",
+    "is_active": true
+  },
+  "leader1": {
+    "username": "leader1",
+    "password_hash": "$2b$12$k7cjkLYkoOmj46fRErM.b../nCy/1p9h21XIxF0iglB1SQM28f5bK",
+    "role": "user",
+    "full_name": "خالد حسن",
+    "email": "leader1@scouts.ma",
+    "created_at": "2026-04-04T12:19:07.578775",
+    "is_active": true
+  },
+  "volunteer1": {
+    "username": "volunteer1",
+    "password_hash": "$2b$12$vKy7xefxEglH9X5kFHP3WeaQOF.ODsu9YE0/RVInCVGq9WoHnX6Eq",
+    "role": "user",
+    "full_name": "سارة أحمد",
+    "email": "volunteer1@scouts.ma",
+    "created_at": "2026-04-04T12:19:07.928900",
+    "is_active": true
+  }
+}

@@ -1,0 +1,15 @@
+/* Main site styles */
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Add custom styles here */
+
+.btn-primary {
+    background-color: #ffcc33;
+    color: #2c160e;
+}
+
+.hidden {
+    display: none;
+}
