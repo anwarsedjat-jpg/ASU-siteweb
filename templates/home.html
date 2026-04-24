@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% set ui = {
+'ar': {
+'title': 'الصفحة الرئيسية',
+'hero_title': 'مرحباً بكم في منصتنا الكشفية',
+'units_title': 'الوحدات',
+'units_copy': 'تعرف على مختلف الوحدات الكشفية.',
+'units_cta': 'عرض الوحدات',
+'clubs_title': 'الأندية',
+'clubs_copy': 'اكتشف أنشطتنا داخل الأندية.',
+'clubs_cta': 'عرض الأندية',
+'activities_title': 'الأنشطة',
+'activities_copy': 'شارك في فعالياتنا وأنشطتنا.',
+'activities_cta': 'عرض الأنشطة',
+'groups_title': 'البحث عن مجموعة',
+'groups_copy': 'ابحث عن مجموعتك الكشفية بسهولة.',
+'groups_cta': 'ابحث الآن',
+'about_title': 'عن الجمعية',
+'about_copy': 'تعرف أكثر على أهداف الجمعية ورسالتها.',
+'about_cta': 'المزيد',
+'no_units': 'لا توجد وحدات متاحة',
+'no_clubs': 'لا توجد أندية متاحة',
+'no_activities': 'لا توجد أنشطة متاحة',
+'age_range': 'الفئة العمرية'
+},
+'en': {
+'title': 'Home',
+'hero_title': 'Welcome to our scouting platform',
+'units_title': 'Units',
+'units_copy': 'Learn about our different scout units.',
+'units_cta': 'View units',
+'clubs_title': 'Clubs',
+'clubs_copy': 'Discover our club activities.',
+'clubs_cta': 'View clubs',
+'activities_title': 'Activities',
+'activities_copy': 'Join our events and activities.',
+'activities_cta': 'View activities',
+'groups_title': 'Find a Group',
+'groups_copy': 'Find your scout group easily.',
+'groups_cta': 'Search now',
+'about_title': 'About Us',
+'about_copy': 'Learn more about our mission and goals.',
+'about_cta': 'Learn more',
+'no_units': 'No units available',
+'no_clubs': 'No clubs available',
+'no_activities': 'No activities available',
+'age_range': 'Age range'
+},
+'fr': {
+'title': 'Accueil',
+'hero_title': 'Bienvenue sur notre plateforme scoute',
+'units_title': 'Unités',
+'units_copy': 'Découvrez les différentes unités scoutes.',
+'units_cta': 'Voir les unités',
+'clubs_title': 'Clubs',
+'clubs_copy': 'Découvrez nos activités au sein des clubs.',
+'clubs_cta': 'Voir les clubs',
+'activities_title': 'Activités',
+'activities_copy': 'Participez à nos événements et activités.',
+'activities_cta': 'Voir les activités',
+'groups_title': 'Trouver un groupe',
+'groups_copy': 'Trouvez facilement votre groupe scout.',
+'groups_cta': 'Rechercher',
+'about_title': 'À propos',
+'about_copy': 'Découvrez nos objectifs et notre mission.',
+'about_cta': 'En savoir plus',
+'no_units': 'Aucune unité disponible',
+'no_clubs': 'Aucun club disponible',
+'no_activities': 'Aucune activité disponible',
+'age_range': 'Tranche d\'âge'
+},
+'es': {
+'title': 'Inicio',
+'hero_title': 'Bienvenidos a nuestra plataforma scout',
+'units_title': 'Unidades',
+'units_copy': 'Conoce las distintas unidades scout.',
+'units_cta': 'Ver unidades',
+'clubs_title': 'Clubes',
+'clubs_copy': 'Descubre nuestras actividades en los clubes.',
+'clubs_cta': 'Ver clubes',
+'activities_title': 'Actividades',
+'activities_copy': 'Participa en nuestros eventos y actividades.',
+'activities_cta': 'Ver actividades',
+'groups_title': 'Buscar un grupo',
+'groups_copy': 'Encuentra tu grupo scout fácilmente.',
+'groups_cta': 'Buscar ahora',
+'about_title': 'Sobre la asociación',
+'about_copy': 'Conoce mejor nuestros objetivos y misión.',
+'about_cta': 'Más información',
+'no_units': 'No hay unidades disponibles',
+'no_clubs': 'No hay clubes disponibles',
+'no_activities': 'No hay actividades disponibles',
+'age_range': 'Rango de edad'
+}
+} %}
+
+{% set lang = session.get('lang', 'ar') %}
+{% set t = ui[lang] %}
+
+{% block title %}{{ t.title }}{% endblock %}
+
+{% block content %}
+<h1>مرحبا بكم في منصتنا الكشفية</h1>
+
+<!-- الوحدات -->
+<h2>الوحدات</h2>
+<div class="container">
+    {% for unit in units %}
+    <div class="card">
+        <h3>{{ unit.name }}</h3>
+        <p>{{ unit.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- الأندية -->
+<h2>الأندية</h2>
+<div class="container">
+    {% for club in clubs %}
+    <div class="card">
+        <h3>{{ club.name }}</h3>
+        <p>{{ club.category }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- الأنشطة -->
+<h2>الأنشطة</h2>
+<div class="container">
+    {% for activity in activities %}
+    <div class="card">
+        <h3>{{ activity.title }}</h3>
+        <p>{{ activity.date }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
